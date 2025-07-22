@@ -1,19 +1,19 @@
 variable "tags" {
   type        = map(any)
-  description = "Tags to be added to AWS resources"
+  description = "Mapa de tags aplicadas a todos os recursos AWS criados. Utilizadas para organização, controle de custos e políticas de compliance."
 }
 
 variable "cluster_name" {
   type        = string
-  description = "EKS cluster name to create MNG"
+  description = "Nome do cluster EKS onde o grupo de nós gerenciados (Managed Node Group) será criado."
 }
 
 variable "subnet_private_1a" {
   type        = string
-  description = "Subnet ID from AZ 1a"
+  description = "ID da subnet privada localizada na zona de disponibilidade 1a, usada para provisionamento dos nós do EKS."
 }
 
 variable "subnet_private_1b" {
   type        = string
-  description = "Subnet ID from AZ 1b"
+  description = "ID da subnet privada localizada na zona de disponibilidade 1b, usada para provisionamento dos nós do EKS."
 }

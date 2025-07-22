@@ -41,7 +41,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_bloco-cidr"></a> [bloco-cidr](#input\_bloco-cidr) | Bloco CIDR utilizado para configurações de rede da VPC. | `string` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | Tagas usadas para o desenvolvimento do projeto | `map(any)` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | Mapa de tags aplicadas a todos os recursos AWS criados. Utilizadas para organização, controle de custos e políticas de compliance. | `map(any)` | n/a | yes |
 
 ## Outputs
 

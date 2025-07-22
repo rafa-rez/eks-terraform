@@ -31,10 +31,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | EKS cluster name | `string` | n/a | yes |
-| <a name="input_oidc"></a> [oidc](#input\_oidc) | HTTPS URL from OIDC provider of the EKS cluster | `string` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | Tags to be added to AWS resources | `map(any)` | n/a | yes |
-| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | VPC ID | `string` | n/a | yes |
+| <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Nome do cluster EKS onde os recursos serão instalados e configurados. | `string` | n/a | yes |
+| <a name="input_oidc"></a> [oidc](#input\_oidc) | URL HTTPS do provedor OIDC do cluster EKS. Necessária para configurar integrações como o AWS Load Balancer Controller com IAM Roles for Service Accounts (IRSA). | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | Mapa de tags aplicadas a todos os recursos AWS criados. Utilizadas para organização, controle de custos e políticas de compliance. | `map(any)` | n/a | yes |
+| <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | ID da VPC onde o cluster EKS está provisionado e onde os recursos adicionais serão associados. | `string` | n/a | yes |
 
 ## Outputs
 

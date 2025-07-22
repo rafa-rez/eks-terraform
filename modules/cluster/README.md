@@ -29,9 +29,9 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_public_subnet_1a"></a> [public\_subnet\_1a](#input\_public\_subnet\_1a) | Subnet para criação do cluster EKS AZ 1a | `string` | n/a | yes |
-| <a name="input_public_subnet_1b"></a> [public\_subnet\_1b](#input\_public\_subnet\_1b) | Subnet para criação do cluster EKS AZ 1b | `string` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | Tagas usadas para o desenvolvimento do projeto | `map(any)` | n/a | yes |
+| <a name="input_public_subnet_1a"></a> [public\_subnet\_1a](#input\_public\_subnet\_1a) | ID da subnet pública na zona de disponibilidade 1a, usada para a criação do cluster EKS. | `string` | n/a | yes |
+| <a name="input_public_subnet_1b"></a> [public\_subnet\_1b](#input\_public\_subnet\_1b) | ID da subnet pública na zona de disponibilidade 1b, usada para a criação do cluster EKS. | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | Mapa de tags aplicadas a todos os recursos AWS criados. Utilizadas para organização, controle de custos e políticas de compliance. | `map(any)` | n/a | yes |
 
 ## Outputs
 

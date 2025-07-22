@@ -5,6 +5,5 @@ variable "bloco-cidr" {
 
 variable "tags" {
   type        = map(any)
-  description = "Tagas usadas para o desenvolvimento do projeto"
-
+  description = "Mapa de tags aplicadas a todos os recursos AWS criados. Utilizadas para organização, controle de custos e políticas de compliance."
 }

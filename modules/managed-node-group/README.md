@@ -27,10 +27,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | EKS cluster name to create MNG | `string` | n/a | yes |
-| <a name="input_subnet_private_1a"></a> [subnet\_private\_1a](#input\_subnet\_private\_1a) | Subnet ID from AZ 1a | `string` | n/a | yes |
-| <a name="input_subnet_private_1b"></a> [subnet\_private\_1b](#input\_subnet\_private\_1b) | Subnet ID from AZ 1b | `string` | n/a | yes |
-| <a name="input_tags"></a> [tags](#input\_tags) | Tags to be added to AWS resources | `map(any)` | n/a | yes |
+| <a name="input_cluster_name"></a> [cluster\_name](#input\_cluster\_name) | Nome do cluster EKS onde o grupo de nós gerenciados (Managed Node Group) será criado. | `string` | n/a | yes |
+| <a name="input_subnet_private_1a"></a> [subnet\_private\_1a](#input\_subnet\_private\_1a) | ID da subnet privada localizada na zona de disponibilidade 1a, usada para provisionamento dos nós do EKS. | `string` | n/a | yes |
+| <a name="input_subnet_private_1b"></a> [subnet\_private\_1b](#input\_subnet\_private\_1b) | ID da subnet privada localizada na zona de disponibilidade 1b, usada para provisionamento dos nós do EKS. | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | Mapa de tags aplicadas a todos os recursos AWS criados. Utilizadas para organização, controle de custos e políticas de compliance. | `map(any)` | n/a | yes |
 
 ## Outputs
 
