@@ -44,3 +44,20 @@ No resources.
 | <a name="output_endpoint"></a> [endpoint](#output\_endpoint) | n/a |
 | <a name="output_oidc"></a> [oidc](#output\_oidc) | n/a |
 <!-- END_TF_DOCS -->
+
+
+
+## Arquitetura da Infraestrutura
+
+![Arquitetura do EKS na AWS](./extras/arq.png)
+
+O diagrama acima representa a arquitetura provisionada com Terraform para um cluster EKS na AWS. A infraestrutura está dividida em duas zonas de disponibilidade (AZs), com os seguintes componentes principais:
+
+- **Subnets Privadas**: abrigam os *worker nodes* (Managed Node Groups) do EKS, garantindo isolamento da internet. O tráfego de saída passa por um **NAT Gateway** localizado nas subnets públicas.
+- **Subnets Públicas**:
+  - **Elastic Load Balancer (ELB)**: criado para controle de fluxo
+  - **NAT Gateway (NGW)**: permite que as subnets privadas acessem a internet
+  - **Interface de Control Plane (ENI)**: interface de rede usada para comunicação com o *API Server* do EKS. Embora o control plane seja gerenciado pela AWS fora da VPC, essa interface o torna acessível pela VPC.
+- **Internet Gateway (IGW)**: conecta a VPC à internet pública.
+- **Usuários**: acessam o cluster via a internet, passando pelo **IGW**, alcançando a **ENI da subnet pública**, que redireciona as requisições ao **API Server** do EKS.
+
