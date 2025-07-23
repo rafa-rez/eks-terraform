@@ -47,7 +47,11 @@ No resources.
 
 
 
-## Arquitetura da Infraestrutura
+
+
+---
+
+# Arquitetura da Infraestrutura
 
 ![Arquitetura do EKS na AWS](./extras/arq.png)
 
@@ -60,4 +64,46 @@ O diagrama acima representa a arquitetura provisionada com Terraform para um clu
   - **Interface de Control Plane (ENI)**: interface de rede usada para comunicação com o *API Server* do EKS. Embora o control plane seja gerenciado pela AWS fora da VPC, essa interface o torna acessível pela VPC.
 - **Internet Gateway (IGW)**: conecta a VPC à internet pública.
 - **Usuários**: acessam o cluster via a internet, passando pelo **IGW**, alcançando a **ENI da subnet pública**, que redireciona as requisições ao **API Server** do EKS.
+
+---
+
+# Exemplo de uso completo
+
+Para facilitar, disponibilizamos um exemplo pronto com os arquivos necessários para testar este módulo.
+
+👉 **[Baixar exemplo .zip](./extras/demo.zip)**
+
+O pacote contém:
+
+- `main.tf`: declaração do módulo  
+- `variables.tf`: definição das variáveis  
+- `terraform.tfvars`: valores usados para provisionamento  
+
+---
+
+### Como utilizar
+
+1. Configure suas credenciais AWS:
+
+```bash
+    aws configure
+```
+
+2. Baixe e extraia o conteúdo do `.zip`:
+
+```bash
+   unzip demo.zip
+   cd demo
+```
+
+3. Inicie o Terraform e aplique as mudanças
+```bash
+   terraform init
+   terraform apply
+```
+
+4. Basta avaliar as aplicações e permitir.
+```bash
+    yes
+```
 
